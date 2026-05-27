@@ -1,0 +1,117 @@
+/* THE BRUTALIST VAULT (Micro Scale) 
+   Raw aesthetic, but with highly minimized, architectural typography.
+*/
+
+:root {
+    --theme: #f2efe9; 
+    --primary: #000000; 
+    --accent: #e83120; 
+    
+    --font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+}
+
+/* 1. Base text nudged down further */
+body {
+    font-family: var(--font-stack);
+    background-color: var(--theme) !important;
+    color: var(--primary) !important;
+    line-height: 1.5; 
+    font-size: 14px; /* Reduced from 16px for a tighter, minimal feel */
+}
+
+.main, .header .nav {
+    max-width: 95% !important; 
+    padding: 0 1rem !important; 
+    margin: 0 auto !important;
+}
+
+.header {
+    background: transparent !important; 
+    padding: 1.5rem 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 2.5rem !important;
+    border-bottom: 2px solid var(--accent); 
+}
+
+.logo {
+    display: none !important;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2.5rem; 
+    margin: 0 !important;
+}
+
+/* 2. Navigation text scaled down slightly */
+.menu a {
+    text-transform: uppercase;
+    font-size: 1.1rem !important; /* Scaled down from 1.4rem */
+    font-weight: 700; 
+    letter-spacing: -0.2px; 
+    color: var(--accent) !important; 
+    transition: opacity 0.2s ease;
+}
+
+.menu a:hover, .menu a.active {
+    color: var(--accent) !important;
+    opacity: 0.6;
+}
+
+.post-entry {
+    background: transparent !important; 
+    padding: 0 !important; 
+    margin: 0 0 2.5rem 0 !important; 
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 3. Entry titles reduced A LOT MORE */
+.entry-header h2 {
+    font-family: var(--font-stack);
+    font-size: 1.3rem !important; /* Drastically reduced from 2rem (and originally 3.5rem) */
+    font-weight: 800; 
+    text-transform: uppercase; 
+    line-height: 1.2;
+    letter-spacing: -0.5px; 
+    color: var(--primary) !important;
+    margin-bottom: 0.4rem;
+    word-wrap: break-word;
+}
+
+/* Journal/Chapter body text nudged down */
+.entry-content {
+    font-size: 0.95rem !important; /* Scaled down slightly */
+    font-weight: 500;
+    color: var(--primary); 
+    max-width: 800px; 
+    margin-top: 0;
+}
+
+/* Description text nudged down */
+.page-description {
+    color: var(--primary) !important;
+    font-size: 1rem !important; /* Scaled down from 1.1rem */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem !important; 
+}
+
+.footer {
+    display: none !important;
+}
+
+/* ----------------------------------------
+   SINGLE PAGE TWEAKS
+   Hide the title when reading a specific entry
+   ---------------------------------------- */
+.post-single .post-header {
+    display: none !important;
+}
+
+/* Pull the content up since the title is gone */
+.post-single .post-content {
+    margin-top: 0 !important;
+}

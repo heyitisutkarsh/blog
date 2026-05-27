@@ -1,0 +1,29 @@
+baseURL = "https://heyitisutkarsh.github.io/blog/"
+languageCode = "en-us"
+title = "The Vault"
+theme = "PaperMod"
+
+[params]
+  # 2. Force Light View Only
+  defaultTheme = "light"
+  disableThemeToggle = true
+  
+  # 1. Hide the dates, times, and reading counts
+  hideMeta = true
+  
+  # Removes default blog clutter
+  disableSpecial1stPost = true 
+
+[menu]
+  [[menu.main]]
+    identifier = "journals"
+    name = "Journals"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "chapters"
+    name = "Chapters"
+    url = "/chapters/"
+    weight = 20
+
